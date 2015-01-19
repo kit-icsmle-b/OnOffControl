@@ -11,13 +11,6 @@ class Logger extends Thread {
 	private static Logger aLogger = new Logger(); 
 	private Logger() {}
 	
-    private long start_time;
-    private int maxSize;
-    private int aReadValue = 0;
-    private LogDataArray array;
-    private boolean aSwitch;
-    private ColorHTSensor aSensor = new ColorHTSensor(SensorPort.S3);
-
 	static Logger getInstance() { 
 		return aLogger; 
 	}
@@ -50,6 +43,14 @@ class Logger extends Thread {
         }
         array.sendLog();
     }
+    
+    private long start_time;
+    private int maxSize;
+    private int aReadValue = 0;
+    private LogDataArray array;
+    private boolean aSwitch;
+    private ColorHTSensor aSensor = new ColorHTSensor(SensorPort.S3);
+
 }
 class LogData{
 	

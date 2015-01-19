@@ -3,13 +3,7 @@ package jp.ac.kit.OnOff;
 class LineSensor extends Thread {
 	private static LineSensor aLineSensor = new LineSensor();
 	private LineSensor() {}
-
-    private int onPoint = 45;
-    private int offPoint = 45;
-    private boolean aSwitch;
-    private Body aBody;
-    private Logger aLogger;
-    
+	
 	static LineSensor getInstance() { 
     	return aLineSensor; 
     }
@@ -42,4 +36,11 @@ class LineSensor extends Thread {
 		}
 		Body.getInstance().halt(); 
 	}
+	
+    private int onPoint = 20;
+    private int offPoint = 28;
+    private boolean aSwitch;
+    private Body aBody;
+    private Logger aLogger;
+
 }
